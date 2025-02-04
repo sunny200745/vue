@@ -1,0 +1,131 @@
+{
+    "name": "Products_GET",
+    "request": {
+      "url": "/client-api/v2/products(\\?.*)?$",
+      "method": "GET"
+    },
+    "responses": {
+      "success": {
+        "status": 200,
+        "data": {
+            "items": [
+                {
+                    "referenceId": "BusinessSaving1",
+                    "name": "Business Member Share Savings",
+                    "maxQuantity": 2147483647,
+                    "description": "The Business Member Share Savings account is required to establish membership.",
+                    "benefits": null,
+                    "costsFrequency": null,
+                    "cost": null,
+                    "annualPercentageRate": null,
+                    "imageUrl": "{BB_GATEWAY_URL}/api/business-onboarding-prospect/assets/product-selection/businessMemberSharedSaving",
+                    "detailedProductDescriptionUrl": "https://www.becu.org/business-banking/checking-and-savings",
+                    "productTypeReferenceId": null,
+                    "productType": "Business Member Share Savings",
+                    "amountLimit": null,
+                    "paymentFrequency": null
+                },
+                {
+                    "referenceId": "BusinessChecking1",
+                    "name": "Business Interest Checking",
+                    "maxQuantity": 2147483647,
+                    "description": "This account pays interest, but offers fewer free transactions than Business Basic Checking.",
+                    "benefits": [
+                        "200 free transactions for accounts with a combined balance under $25k.",
+                        "450 free transactions for accounts with a combined balance over $25k.",
+                        "No monthly maintenance fees."
+                    ],
+                    "costsFrequency": null,
+                    "cost": null,
+                    "annualPercentageRate": null,
+                    "imageUrl": "{BB_GATEWAY_URL}/api/business-onboarding-prospect/assets/product-selection/businessInterestChecking",
+                    "detailedProductDescriptionUrl": "https://www.becu.org/business-banking/checking-and-savings",
+                    "productTypeReferenceId": null,
+                    "productType": "Business Interest Checking",
+                    "amountLimit": null,
+                    "paymentFrequency": null
+                },
+                {
+                    "referenceId": "BusinessChecking2",
+                    "name": "Business Basic Checking",
+                    "maxQuantity": 2147483647,
+                    "description": "This account does not pay interest, but offers more free transactions than Business Interest Checking.",
+                    "benefits": [
+                        "350 free transactions under $25k.",
+                        "600 free transactions are for accounts with a combined balance over $25k.",
+                        "No monthly maintenance fees."
+                    ],
+                    "costsFrequency": null,
+                    "cost": null,
+                    "annualPercentageRate": null,
+                    "imageUrl": "{BB_GATEWAY_URL}/api/business-onboarding-prospect/assets/product-selection/businessBasicChecking",
+                    "detailedProductDescriptionUrl": "https://www.becu.org/business-banking/checking-and-savings",
+                    "productTypeReferenceId": null,
+                    "productType": "Business Basic Checking",
+                    "amountLimit": null,
+                    "paymentFrequency": null
+                },
+                {
+                    "referenceId": "BusinessChecking3",
+                    "name": "I do not want a Business Interest Checking or a Business Basic Checking account at this time.",
+                    "maxQuantity": 2147483647,
+                    "description": null,
+                    "benefits": null,
+                    "costsFrequency": null,
+                    "cost": null,
+                    "annualPercentageRate": null,
+                    "imageUrl": "{BB_GATEWAY_URL}/api/business-onboarding-prospect/assets/product-selection/noAccount",
+                    "detailedProductDescriptionUrl": null,
+                    "productTypeReferenceId": null,
+                    "productType": "Business Not select",
+                    "amountLimit": null,
+                    "paymentFrequency": null
+                }
+            ],
+            "count": null,
+            "next": null
+          },
+        "default": true
+      },
+      "badRequest": {
+        "status": 400,
+        "data": {
+          "message": "Bad Request",
+          "key": "GENERAL_ERROR",
+          "errors": [
+            {
+              "message": "Value Exceeded. Must be between {min} and {max}.",
+              "key": "common.api.shoesize",
+              "context": {
+                "max": "50",
+                "min": "1"
+              }
+            }
+          ]
+        }
+      },
+      "notAuthorized": {
+        "status": 401,
+        "data": {
+          "message": "Access to requested resource denied.",
+          "key": "GENERAL_ERROR",
+          "errors": [
+            {
+              "message": "Resource access denied due to invalid credentials.",
+              "key": "common.api.token",
+              "context": {
+                "accessToken": "expired"
+              }
+            }
+          ]
+        }
+      },
+      "systemError": {
+        "status": 500,
+        "data": {
+          "message": "Description of error"
+        }
+      }
+    }
+  }
+  

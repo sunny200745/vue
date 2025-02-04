@@ -2,18 +2,21 @@
   "name": "setup-tailwind",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mock-server": "node ./mock-server/mock-server.js"
   },
   "dependencies": {
+    "express": "^4.21.2",
     "flowbite": "^3.0.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@ng-apimock/core": "^3.12.0",
+    "@ng-apimock/dev-interface": "^3.5.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
