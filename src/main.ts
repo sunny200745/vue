@@ -4,12 +4,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import App from './App.vue'
 import BindDirective from './components/BindDirective.vue'
 
-const router = createRouter({
-    history:createWebHistory(),
-    routes:[
-        { path:'/directives', component: BindDirective},
-    ]
-})
+
 
 import { onMounted } from 'vue'
 import { 
@@ -24,6 +19,15 @@ import {
     initPopovers, 
     initTabs, 
     initTooltips } from 'flowbite'
+import ForDirective from './components/ForDirective.vue'
+
+const router = createRouter({
+    history:createWebHistory(),
+    routes:[
+        { path:'/bind-directive', component: BindDirective},
+        { path:'/for-directive', component: ForDirective},
+    ]
+})
 
 // initialize components based on data attribute selectors
 onMounted(() => {
