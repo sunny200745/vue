@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 const colorVal = ref('lightGreen');
+
+const product = ref(null)
+const baseUrl = 'http://localhost:4000/'
+fetch(baseUrl+'client-api/v2/products')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Data', data)
+      product.value = data
+    });
+
+
 </script>
 <template>
   <div class="max-w-screen-xl block  p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
