@@ -99,15 +99,15 @@
                   <li>
                     <router-link
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      to="/directives"
+                      to="/bind-directive"
                       >Bind Directive</router-link
                     >
                   </li>
                   <li>
-                    <a
-                      href="/"
+                    <router-link
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Earnings</a
+                      to="/for-directive"
+                      >For Directive</router-link
                     >
                   </li>
                 </ul>
