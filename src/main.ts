@@ -20,12 +20,14 @@ import {
     initTabs, 
     initTooltips } from 'flowbite'
 import ForDirective from './components/ForDirective.vue'
+import HtmlDirective from './components/HtmlDirective.vue'
 
 const router = createRouter({
     history:createWebHistory(),
     routes:[
         { path:'/bind-directive', component: BindDirective},
         { path:'/for-directive', component: ForDirective},
+        { path:'/html-directive', component: HtmlDirective},
     ]
 })
 
