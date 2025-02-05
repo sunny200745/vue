@@ -1,6 +1,6 @@
-const apimock = require('@ng-apimock/core');
-const devInterface = require('@ng-apimock/dev-interface');
-const express = require('express');
+import apimock from '@ng-apimock/core'
+import devInterface from '@ng-apimock/dev-interface'
+import express from 'express'
 const app = express();
 
 app.set('port', 4000);
