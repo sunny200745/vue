@@ -7,7 +7,7 @@ const htmlContent = '<ol><li>Tomotoes</li><li>Ginger</li><li>Garlic</li></ol>'
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800">
 
-                <h5 class="mb-2 text-2xl  font-bold tracking-tight text-gray-900"> HTML Directive Example</h5>
+                <h5 class="p-3 text-2xl  font-bold tracking-tight text-gray-900"> HTML Directive Example</h5>
             </div>
 
             <div class="flex">

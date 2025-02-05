@@ -117,6 +117,13 @@
                       >Html Directive</router-link
                     >
                   </li>
+                  <li>
+                    <router-link
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      to="/if-else-directive"
+                      >If Else Directive</router-link
+                    >
+                  </li>
                 </ul>
               </div>
             </li>
