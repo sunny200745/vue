@@ -22,6 +22,7 @@ import {
 import ForDirective from './components/ForDirective.vue'
 import HtmlDirective from './components/HtmlDirective.vue'
 import IfElseDirective from './components/IfElseDirective.vue'
+import ModelDirective from './components/ModelDirective.vue'
 
 const router = createRouter({
     history:createWebHistory(),
@@ -30,6 +31,7 @@ const router = createRouter({
         { path:'/for-directive', component: ForDirective},
         { path:'/html-directive', component: HtmlDirective},
         { path:'/if-else-directive', component: IfElseDirective},
+        { path:'/model-directive', component: ModelDirective},
     ]
 })
 
