@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.spinner {
+    background: linear-gradient(white, white),
+      conic-gradient(from 0.5turn, white, white, white, #b7c4fc 30%, #8ec5fc);
+  
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 50%;
+  }

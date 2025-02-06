@@ -6,7 +6,7 @@ const animals = ['Tiger','Zebra','Wolf','Crocodile','Seal'];
 const products:any = ref(null)
 const baseUrl = 'http://localhost:4000/';
 
-fetch(baseUrl+'client-api/v2/products')
+fetch('client-api/v2/products')
     .then(response => response.json())
     .then(data => {
       console.log('Data', data)
@@ -39,8 +39,8 @@ fetch(baseUrl+'client-api/v2/products')
                         <li class="mb-2 px-5 pt-3" v-for="product in products" :key="product.id">{{product.name}}</li>
                     </ul>
                 </div>
-                <div v-if="!products" class="text-center">
-                    <div class="spinner-border spinner-border-sm"></div>
+                <div  v-if="!products" class="text-center">
+                    <div class="mx-auto mt-5 mb-5 spinner h-12 w-12 border-solid border-8 border-transparent animate-spin"></div>
                 </div>
             </div>
         </div>
