@@ -23,15 +23,39 @@ import ForDirective from './components/ForDirective.vue'
 import HtmlDirective from './components/HtmlDirective.vue'
 import IfElseDirective from './components/IfElseDirective.vue'
 import ModelDirective from './components/ModelDirective.vue'
+import Dashboard from './components/dashboard/Dashboard.vue'
 
 const router = createRouter({
     history:createWebHistory(),
     routes:[
-        { path:'/bind-directive', component: BindDirective},
-        { path:'/for-directive', component: ForDirective},
-        { path:'/html-directive', component: HtmlDirective},
-        { path:'/if-else-directive', component: IfElseDirective},
-        { path:'/model-directive', component: ModelDirective},
+        { 
+            path:'/bind-directive', 
+            component: BindDirective
+        },
+        { 
+            path:'/for-directive', 
+            component: ForDirective
+        },
+        { 
+            path:'/html-directive', 
+            component: HtmlDirective
+        },
+        { 
+            path:'/if-else-directive', 
+            component: IfElseDirective
+        },
+        { 
+            path:'/model-directive', 
+            component: ModelDirective
+        },
+        { 
+            path:'/dashboard', 
+            component: Dashboard
+        },
+        {
+            path: '/',
+            redirect: '/dashboard'
+        },
     ]
 })
 
