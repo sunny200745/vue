@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script setup >
     import  {ref} from 'vue';
     import DataService from '../../services/data';
-    let transactions:any;
+    import TransList from './TransList.vue';
+    const transactions = ref(null);
 
-    DataService.getUsers((val:any)=>{
-        console.log('#########',val)
-        transactions = ref(val)
+    DataService.getUsers((val)=>{
+        transactions.value = val;
     },{})
 </script>
 
@@ -20,11 +20,11 @@
             <div class="mb-2">
                 <div v-if="transactions">
                     <ul class="divide-y divide-gray-200 dark:divide-gray-700 ">
-                        <li class="mb-2 px-5 pt-3" v-for="item in transactions" :key="item.id">{{item.counterPartyName}}</li>
+                        <TransList v-for="item in transactions" :key="item.id" :item="item" />
                     </ul>
                 </div>
-                <div v-if="!transactions" class="text-center">
-                    <div class="spinner-border spinner-border-sm"></div>
+                <div  v-if="!transactions" class="text-center">
+                    <div class="mx-auto mt-5 mb-5 spinner h-12 w-12 border-solid border-8 border-transparent animate-spin"></div>
                 </div>
             </div>
         </div>

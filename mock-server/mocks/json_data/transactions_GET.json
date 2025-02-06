@@ -444,6 +444,7 @@
             "description": "www.starbucks.com",
             "originalDescription": "STARBUCKS 65000000764AMSTERDAM",
             "typeGroup": "Payment",
+            "counterPartyName": "Dummy Name",
             "type": "Card Payment",
             "category": "Food Drinks",
             "bookingDate": "2019-02-13",
