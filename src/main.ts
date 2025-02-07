@@ -28,6 +28,7 @@ import TransactionDetails from './components/dashboard/TransactionDetails.vue'
 import Counter from './components/examples/Counter.vue'
 import ParentChildCommunicationWithout from './components/examples/without-emit/ParentChildCommunication.vue'
 import ParentChildCommunication from './components/examples/with-emit/ParentChildCommunication.vue'
+import Slots from './components/examples/slots/Slots.vue'
 
 const router = createRouter({
     history:createWebHistory(),
@@ -71,6 +72,10 @@ const router = createRouter({
         { 
             path:'/example-parent-child-communication-with-emit', 
             component: ParentChildCommunication,
+        },
+        { 
+            path:'/example-slots', 
+            component: Slots,
         },
         {
             path: '/',
