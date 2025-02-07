@@ -2,12 +2,12 @@
 
 import {ref} from 'vue'
 import { computed } from "vue";
-
+const emit = defineEmits('favorite-food')
 
 const props = defineProps(['foodItem'])
 const item = ref(props.foodItem)
 const toggleFavorite = () =>{
-    item.value.favorite = !item.value.favorite
+    emit('favorite-food', item.value.name)
 }
 </script>
 
@@ -21,7 +21,7 @@ const toggleFavorite = () =>{
                     </h2>
                     <img width="100px" :src="`src/assets/${item.img}`" >
                     <p>{{ item.desc }}</p>
-                    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Favourite</button>
+                    
                 </div>
             </div>
     </div>        
