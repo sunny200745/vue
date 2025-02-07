@@ -24,6 +24,7 @@ import HtmlDirective from './components/HtmlDirective.vue'
 import IfElseDirective from './components/IfElseDirective.vue'
 import ModelDirective from './components/ModelDirective.vue'
 import Dashboard from './components/dashboard/Dashboard.vue'
+import TransactionDetails from './components/dashboard/TransactionDetails.vue'
 
 const router = createRouter({
     history:createWebHistory(),
@@ -50,11 +51,16 @@ const router = createRouter({
         },
         { 
             path:'/dashboard', 
-            component: Dashboard
+            component: Dashboard,
+        },
+        {
+            path: '/dashboard/:id',
+            component: TransactionDetails,
         },
         {
             path: '/',
             redirect: '/dashboard'
+            
         },
     ]
 })

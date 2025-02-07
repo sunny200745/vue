@@ -1,12 +1,20 @@
 
 <script setup lang="ts">
-defineProps(['item'])
-console.log('######hasjdhaskjdhaskdhaskdha')
+import { useRoute, useRouter } from 'vue-router'
+
+defineProps(['item']);
+const router = useRouter()
+const route = useRoute()
+
+const toDetails = (item:any, ev:any) => {
+    console.log('Details----', item, ev)
+    router.push('/dashboard/'+ item)
+}
 </script>
 
 <template>
     <div>
-        <li class="mb-2 px-5 pt-3 flex justify-between items-center" >
+        <li class="mb-2 px-5 pt-3 flex justify-between items-center" @click="toDetails(item.id, $event)">
             <div >
                 <div >{{ item.counterPartyName }}</div>
                 <div class="tracking-tighter text-gray-500 md:text-sm dark:text-gray-400">
