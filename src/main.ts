@@ -25,6 +25,7 @@ import IfElseDirective from './components/IfElseDirective.vue'
 import ModelDirective from './components/ModelDirective.vue'
 import Dashboard from './components/dashboard/Dashboard.vue'
 import TransactionDetails from './components/dashboard/TransactionDetails.vue'
+import Counter from './components/examples/Counter.vue'
 
 const router = createRouter({
     history:createWebHistory(),
@@ -56,6 +57,10 @@ const router = createRouter({
         {
             path: '/dashboard/:id',
             component: TransactionDetails,
+        },
+        { 
+            path:'/example-counter', 
+            component: Counter,
         },
         {
             path: '/',

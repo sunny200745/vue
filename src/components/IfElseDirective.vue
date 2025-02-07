@@ -16,7 +16,7 @@ const word:any = ref('apple')
                 <figure class="mx-auto relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
                     <div v-if="word === 'apple'">
                         <a href="#">
-                            <img class="rounded-lg" src="https://www.w3schools.com/vue/img_apple.svg" alt="image description">
+                            <img class="rounded-lg" src="../assets/img_apple.svg" alt="image description">
                         </a>
                     </div>
                     <div v-else-if="word === 'pizza'">
