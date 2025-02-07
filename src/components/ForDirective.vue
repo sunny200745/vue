@@ -4,7 +4,6 @@ import { ref } from "vue";
 
 const animals = ['Tiger','Zebra','Wolf','Crocodile','Seal'];
 const products:any = ref(null)
-const baseUrl = 'http://localhost:4000/';
 
 fetch('client-api/v2/products')
     .then(response => response.json())

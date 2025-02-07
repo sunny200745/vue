@@ -26,6 +26,7 @@ import ModelDirective from './components/ModelDirective.vue'
 import Dashboard from './components/dashboard/Dashboard.vue'
 import TransactionDetails from './components/dashboard/TransactionDetails.vue'
 import Counter from './components/examples/Counter.vue'
+import ParentChildCommunication from './components/examples/ParentChildCommunication.vue'
 
 const router = createRouter({
     history:createWebHistory(),
@@ -61,6 +62,10 @@ const router = createRouter({
         { 
             path:'/example-counter', 
             component: Counter,
+        },
+        { 
+            path:'/example-parent-child-communication', 
+            component: ParentChildCommunication,
         },
         {
             path: '/',
